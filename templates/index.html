@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="th">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LM Studio Chatbot</title>
+  <link rel="icon" href="/static/img/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"></script>
+</head>
+  <body>
+    <div class="header-user-info">68076061 SIRILUK THONGPAT</div>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="app-header-text">
+          <img class="logo-img" src="/static/img/logo.png" alt="Honda Leasing Logo" />
+          <span class="app-subtitle">Honda Leasing</span>
+        </div>              
+      </header>
+
+      <main id="chat-window" class="chat-window">
+        <div id="empty-state" class="empty-state">
+          <p>สวัสดีค่ะ ฮอนด้ายินดีต้อนรับ มีอะไรให้ช่วยเหลือไหม?</p>
+        </div>
+        <div id="loading-indicator" class="loading-indicator hidden">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </main>
+
+      <div id="error-banner" class="error-banner hidden"></div>
+
+      <form id="chat-form" class="chat-form">
+        <input
+          id="message-input"
+          class="message-input"
+          type="text"
+          placeholder="พิมพ์ข้อความ..."
+          autocomplete="off"
+          required
+        />
+        <button id="send-button" class="send-button" type="submit">ส่ง</button>
+        <button id="stop-button" class="stop-button hidden" type="button">หยุด</button>
+      </form>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+  </body>
+</html>
